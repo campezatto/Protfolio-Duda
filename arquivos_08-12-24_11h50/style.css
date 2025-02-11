@@ -153,23 +153,14 @@
         justify-content: space-between;
     }
 
-    #foto {
+    #foto{
 
-        background-color: #758fa3;
-        height: 50%;
-        width: 26.5%;
+        background-image: url("foto.jpg"); 
         border-radius: 3px;
         position: absolute;
         margin-left: 53%;
         margin-top: -10%;
-
-    }
-
-
-    #foto{
-
-        height: 45%;
-        width: 21.5%;
+        object-fit: cover;
 
     }
 
@@ -288,25 +279,17 @@
     #titulo1 {
 
         color: white;
-        margin-top: -32.5%;
-        font-size: 43px;
+        font-size: 40px;
         font-family: "Julius Sans One", sans-serif;
-        position: relative;
-        margin-right: -15%;
         z-index: -0.5;
+        position: absolute;
+        left: 70%;
+        top: 211%;
+        background-color: transparent;
+        border-color: whitesmoke;
 
     }
 
-    #blccertfcds {
-
-        background-color: white;
-        height: 50vh;
-        width: 15%;
-        margin-top: -29%;
-        margin-right: 24%;
-        border-radius: 1%;
-
-    }
 
     #linha6 {
 
