@@ -153,9 +153,9 @@
         justify-content: space-between;
     }
 
-    #foto{
+    #foto {
 
-        background-image: url("foto.jpg"); 
+        background-image: url("foto.jpg");
         border-radius: 3px;
         position: absolute;
         margin-left: 53%;
@@ -701,4 +701,30 @@
     .button-container .button:nth-child(2) {
         float: right;
         right: -25%;
+    }
+
+    footer {
+
+        width: 100%;
+        height: 150px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+    }
+
+    #socials{
+
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    #socials2{
+
+        position: absolute;
+        bottom: -270px;
+        padding-left: 2%;
+
+
     }
