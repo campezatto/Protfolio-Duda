@@ -138,3 +138,12 @@ const slider = document.querySelector(".items");
 			slides[prev].classList.add("prev");
 			slides[next].classList.add("next");
 		}
+
+
+
+
+
+
+
+
+        
