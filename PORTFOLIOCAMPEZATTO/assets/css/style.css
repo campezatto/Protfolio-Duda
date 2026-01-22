@@ -1069,14 +1069,16 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 280px;
-        height: 180px;
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
         margin: 50px auto;
+        overflow: hidden;
     }
     
     .mobile-carousel .carousel-slide {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 200px;
         border-radius: 15px;
         overflow: hidden;
         display: none;
