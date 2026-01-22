@@ -88,21 +88,9 @@ const gotoNum = number => {
 
     for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove("active");
-        slides[i].classList.remove("prev");
-        slides[i].classList.remove("next");
-    }
-
-    if (next == 5) {
-        next = 0;
-    }
-
-    if (prev == -1) {
-        prev = 4;
     }
 
     slides[current].classList.add("active");
-    slides[prev].classList.add("prev");
-    slides[next].classList.add("next");
 }
 
 // Carrossel de Projetos
@@ -227,4 +215,36 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = false;
         });
     });
+});
+// Carrossel de Artes
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselArtes = document.getElementById('carousel-artes');
+    const itemsArtes = document.querySelectorAll('.carousel-item-artes');
+    const prevBtnArtes = document.querySelector('.prev-btn-artes');
+    const nextBtnArtes = document.querySelector('.next-btn-artes');
+    
+    let currentSlideArtes = 0;
+    
+    function showSlideArtes(index) {
+        itemsArtes.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        itemsArtes[index].classList.add('active');
+    }
+    
+    function nextSlideArtes() {
+        currentSlideArtes = (currentSlideArtes + 1) % itemsArtes.length;
+        showSlideArtes(currentSlideArtes);
+    }
+    
+    function prevSlideArtes() {
+        currentSlideArtes = currentSlideArtes === 0 ? itemsArtes.length - 1 : currentSlideArtes - 1;
+        showSlideArtes(currentSlideArtes);
+    }
+    
+    nextBtnArtes.addEventListener('click', nextSlideArtes);
+    prevBtnArtes.addEventListener('click', prevSlideArtes);
+    
+    showSlideArtes(0);
 });
