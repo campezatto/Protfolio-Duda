@@ -21,56 +21,16 @@ function abrirdrawer() {
 }
 
 
-function myFunction() {
-    let main = document.querySelector("#roxo");
-    let form = document.querySelector("#form");
-    const checkbox = document.querySelector("#check")
+function toggleTheme() {
+    const body = document.body;
+    const checkbox = document.querySelector("#check");
+
     if (checkbox.checked) {
-        main.style.backgroundColor = "#D7CDCC"
-        main.style.color = "black"
-        quemsou.style.backgroundColor = " #87B2C0"
-        quemsou.style.color = "black"
-        projetos.style.backgroundColor = "#B3DEE2"
-        ttl1.style.color = "black"
-        titulo1.style.color = "black"
-        artes.style.backgroundColor = "#9EB3C2"
-        ttla.style.color = "black"
-        contact.style.backgroundColor = "white"
-        contact.style.color = "black"
-        form.style.color = "black"
-        form.style.background = "#72ffa1"
-        linha.style.backgroundColor = "#1C2F35"
-        scrl.style.color = "#1C2F35"
-        linha3.style.backgroundColor = "#D7CDCC"
-        linha9.style.backgroundColor = "white"
-        
-        // Mobile fixes
-        const ttl = document.querySelector("#ttl");
-        if (ttl) ttl.style.color = "black";
-
-    }
-    else {
-        main.style.backgroundColor = "#200116"
-        main.style.color = "#72ffa1"
-        quemsou.style.backgroundColor = "#22292F"
-        projetos.style.backgroundColor = "#1C3B46"
-        ttl1.style.color = "#9EB3C2"
-        titulo1.style.color = "#9EB3C2"
-        ttla.style.color = "#9EB3C2"
-        artes.style.backgroundColor = " #3C3A45"
-        contact.style.backgroundColor = "Black"
-        contact.style.color = "white"
-        form.style.color = "white"
-        form.style.backgroundColor = "#30523B"
-        linha.style.backgroundColor = "#9EB3C2"
-        scrl.style.color = "#9EB3C2"
-        linha3.style.backgroundColor = "#200116"
-        linha9.style.backgroundColor = "black"
-        
-        // Mobile fixes
-        const ttl = document.querySelector("#ttl");
-        if (ttl) ttl.style.color = "white";
-
+        body.classList.add("light-mode");
+        body.classList.remove("dark-mode");
+    } else {
+        body.classList.add("dark-mode");
+        body.classList.remove("light-mode");
     }
 }
 

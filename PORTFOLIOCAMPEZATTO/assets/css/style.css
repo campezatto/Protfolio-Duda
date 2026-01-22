@@ -1289,3 +1289,88 @@
         transform: scale(0.8);
     }
 }
+
+
+
+/* ===== MODO CLARO ===== */
+.light-mode #roxo {
+    background-color: #D7CDCC;
+    color: black;
+}
+
+.light-mode #quemsou {
+    background-color: #87B2C0;
+    color: black;
+}
+
+.light-mode #projetos {
+    background-color: #B3DEE2;
+}
+
+.light-mode #artes {
+    background-color: #9EB3C2;
+}
+
+.light-mode #contact {
+    background-color: white;
+    color: black;
+}
+
+.light-mode #form {
+    background-color: #72ffa1;
+    color: black;
+}
+
+.light-mode .linha {
+    background-color: #1C2F35;
+}
+
+.light-mode .scrl {
+    color: #1C2F35;
+}
+
+/* ===== MODO ESCURO ===== */
+.dark-mode #roxo {
+    background-color: #200116;
+    color: #72ffa1;
+}
+
+.dark-mode #quemsou {
+    background-color: #22292F;
+}
+
+.dark-mode #projetos {
+    background-color: #1C3B46;
+}
+
+.dark-mode #artes {
+    background-color: #3C3A45;
+}
+
+.dark-mode #contact {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode #form {
+    background-color: #30523B;
+    color: white;
+}
+
+.dark-mode .linha {
+    background-color: #9EB3C2;
+}
+
+.dark-mode .scrl {
+    color: #9EB3C2;
+}
+
+
+
+.light-mode #ttla {
+    color:#2e353a;       
+}
+
+.dark-mode #ttla {
+    color: #9EB3C2;     
+}
