@@ -23,6 +23,7 @@ function abrirdrawer() {
 
 function myFunction() {
     let main = document.querySelector("#roxo");
+    let form = document.querySelector("#form");
     const checkbox = document.querySelector("#check")
     if (checkbox.checked) {
         main.style.backgroundColor = "#D7CDCC"
@@ -37,11 +38,15 @@ function myFunction() {
         contact.style.backgroundColor = "white"
         contact.style.color = "black"
         form.style.color = "black"
-        form.style.backgroundColor = "#72ffa1"
+        form.style.background = "#72ffa1"
         linha.style.backgroundColor = "#1C2F35"
         scrl.style.color = "#1C2F35"
         linha3.style.backgroundColor = "#D7CDCC"
         linha9.style.backgroundColor = "white"
+        
+        // Mobile fixes
+        const ttl = document.querySelector("#ttl");
+        if (ttl) ttl.style.color = "black";
 
     }
     else {
@@ -61,6 +66,10 @@ function myFunction() {
         scrl.style.color = "#9EB3C2"
         linha3.style.backgroundColor = "#200116"
         linha9.style.backgroundColor = "black"
+        
+        // Mobile fixes
+        const ttl = document.querySelector("#ttl");
+        if (ttl) ttl.style.color = "white";
 
     }
 }
@@ -243,8 +252,72 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlideArtes(currentSlideArtes);
     }
     
-    nextBtnArtes.addEventListener('click', nextSlideArtes);
-    prevBtnArtes.addEventListener('click', prevSlideArtes);
+    if (nextBtnArtes) nextBtnArtes.addEventListener('click', nextSlideArtes);
+    if (prevBtnArtes) prevBtnArtes.addEventListener('click', prevSlideArtes);
+    
+    showSlideArtes(0);
+});
+
+// Carrossel Mobile de Projetos
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileCarousel = document.querySelector('.mobile-carousel');
+    if (!mobileCarousel) return;
+    
+    const slides = mobileCarousel.querySelectorAll('.carousel-slide');
+    const prevBtn = mobileCarousel.querySelector('.nav-btn.prev');
+    const nextBtn = mobileCarousel.querySelector('.nav-btn.next');
+    
+    let currentSlide = 0;
+    
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+    
+    function prevSlide() {
+        currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+        showSlide(currentSlide);
+    }
+    
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    
+    showSlide(0);
+});
+
+// Carrossel Mobile de Artes
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileCarouselArtes = document.querySelector('.mobile-carousel-artes');
+    if (!mobileCarouselArtes) return;
+    
+    const slidesArtes = mobileCarouselArtes.querySelectorAll('.carousel-slide');
+    const prevBtnArtes = mobileCarouselArtes.querySelector('.nav-btn.prev');
+    const nextBtnArtes = mobileCarouselArtes.querySelector('.nav-btn.next');
+    
+    let currentSlideArtes = 0;
+    
+    function showSlideArtes(index) {
+        slidesArtes.forEach(slide => slide.classList.remove('active'));
+        slidesArtes[index].classList.add('active');
+    }
+    
+    function nextSlideArtes() {
+        currentSlideArtes = (currentSlideArtes + 1) % slidesArtes.length;
+        showSlideArtes(currentSlideArtes);
+    }
+    
+    function prevSlideArtes() {
+        currentSlideArtes = currentSlideArtes === 0 ? slidesArtes.length - 1 : currentSlideArtes - 1;
+        showSlideArtes(currentSlideArtes);
+    }
+    
+    if (nextBtnArtes) nextBtnArtes.addEventListener('click', nextSlideArtes);
+    if (prevBtnArtes) prevBtnArtes.addEventListener('click', prevSlideArtes);
     
     showSlideArtes(0);
 });
